@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sidebar</title>
+		<script src="bower_components/platform/platform.js"></script>
+		<link rel="import" href="bower_components/font-roboto/roboto.html">
+
+		<link rel="import" 
+			href="bower_components/core-toolbar/core-toolbar.html">
+		<link rel="import"
+			href="bower_components/core-menu/core-submenu.html">
+		<link rel="import" 
+			href="bower_components/core-header-panel/core-header-panel.html">
+		<link rel="import"
+			href="bower_components/core-menu/core-menu.html">
+		<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+		<link rel="import" href="bower_components/core-item/core-item.html">
+
+		<style>
+			html, body {
+				font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+				height: 100%;
+				margin: 0;
+			}
+
+			core-header-panel {
+		      width: 240px;
+		      height: 100%;
+		    }
+		    core-scaffold {
+		      position: absolute;
+		      top: 0;
+		      right: 0;
+		      bottom: 0;
+		      left: 0;
+		    }
+
+			core-scaffold /deep/ #drawer {
+				width: 240px;
+			}
+	
+			core-scaffold /deep/ #main {
+				left: 240px;
+			}
+
+			core-scaffold /deep/ core-toolbar {
+				height: 56px;
+				background-color: #5092bd ;
+			}
+
+		    .core-header {
+		      height: 56px;
+		      line-height: 60px;
+		      font-size: 20px;
+		      padding: 0px 10px;
+		      background-color: #3c779e;
+		      color: #FFF;
+		      transition: height 0.2s;
+		    }
+		    
+		    core-toolbar /deep/ .toolbar-tools {
+		    	height: 60px;
+		    }
+
+/*		    .content {
+		      height: 2000px;
+		      background: linear-gradient(rgb(214, 227, 231), lightblue);
+		    }*/
+		</style>
+	</head>
+	<body unresolved>
+		<core-scaffold>
+			<core-header-panel navigation flex mode="">
+			    <core-toolbar class="core-header">
+			    	<img src="images/otterlogo.png" height="30px" width="30px">
+			    	<div>Otter</div>
+			    </core-toolbar>
+			    <core-menu selected=0>
+				  	<core-item icon="account-circle" label="Dashboard"></core-item>
+				  	<core-submenu icon="apps" label="Topics">
+					  	<core-item label="Topic 1"></core-item>
+					  	<core-item label="Topic 2"></core-item>
+				  	</core-submenu>
+				  	<core-submenu icon="add-circle-outline" label="More">
+					  	<core-item label="Topic 1"></core-item>
+					  	<core-item label="Topic 2"></core-item>
+				  	</core-submenu>
+				  	<core-item icon="settings" label="Settings"></core-item>
+			  	</core-menu>
+		  	</core-header-panel>
+		</core-scaffold>
+	</body>
+</html>

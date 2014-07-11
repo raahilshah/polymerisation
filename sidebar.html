@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sidebar</title>
+		<script src="bower_components/platform/platform.js"></script>
+		<link rel="import" 
+			href="bower_components/polymer-ui-sidebar-menu/polymer-ui-sidebar-menu.html">
+		<link rel="import" 
+			href="bower_components/polymer-ui-menu-item/polymer-ui-menu-item.html">
+		<link rel="import" 
+			href="bower_components/polymer-ui-submenu-item/polymer-ui-submenu-item.html">
+		<link rel="import" href="bower_components/font-roboto/roboto.html">
+		<style>
+			body {
+				font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+				height: 100%;
+				margin: 0;
+			}
+
+			polymer-ui-sidebar-menu {
+				width: 240px;
+				height: 100%;			
+			}
+		</style>
+	</head>
+	<body>
+		<polymer-ui-sidebar-menu selected="0" label="Otter">
+			<polymer-ui-submenu-item icon="add" label="Groups">
+				<polymer-ui-menu-item label="1A Java"></polymer-ui-menu-item>
+				<polymer-ui-menu-item label="1B Java"></polymer-ui-menu-item>
+				<polymer-ui-menu-item label="1B Prolog"></polymer-ui-menu-item>
+			</polymer-ui-submenu-item>
+			<polymer-ui-submenu-item icon="settings" label="Settings">
+				<polymer-ui-menu-item label="Account"></polymer-ui-menu-item>
+				<polymer-ui-menu-item label="Contact"></polymer-ui-menu-item>ß
+			</polymer-ui-submenu-item>
+		</polymer-ui-sidebar-menu>
+
+	</body>
+
+<html>

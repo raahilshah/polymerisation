@@ -1,6 +1,34 @@
+
 <html>
-	<head><title>Student Page</title></head>
+	<head>
+		<title>Student Page</title>
+		<script src="bower_components/platform/platform.js"></script>
+		<link rel="import" href="bower_components/font-roboto/roboto.html">
+		<link rel="import" href="bower_components/paper-button/paper-button.html">
+
+		<style shim-shadowdom>
+			body {
+				font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+				margin: 0;
+				padding: 24px;
+			}
+
+			paper-button {
+				margin: 1em;
+				width: 10em;
+			}
+
+		    paper-button.colored {
+		      background: #009933;
+		      color: #fff;
+		    }
+		</style>
+	</head>
 	<body>
+		<!-- page code -->
+		<paper-button raisedButton class="colored" label="FORK"></paper-button>
+		<br>		
+		<paper-button raisedButton class="colored" label="SUBMIT"></paper-button>
 		
 	</body>
-</html>
+<html>	
