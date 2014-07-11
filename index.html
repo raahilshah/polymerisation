@@ -5,6 +5,7 @@
 		<script src="bower_components/platform/platform.js"></script>
 		<link rel="import" href="bower_components/font-roboto/roboto.html">
 
+		<!-- Library Imports -->
 		<link rel="import" 
 			href="bower_components/core-toolbar/core-toolbar.html">
 		<link rel="import"
@@ -15,56 +16,19 @@
 			href="bower_components/core-menu/core-menu.html">
 		<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
 		<link rel="import" href="bower_components/core-item/core-item.html">
+		<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+		<link rel="import" href="bower_components/paper-button/paper-button.html">
+
+
+		<!-- My Imports -->
+		<link rel="import" href="elements/my-element.html">
+		<link rel="import" href="elements/app-bar.html">
+
+		<!-- CSS Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<style>
-			html, body {
-				font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
-				height: 100%;
-				margin: 0;
-			}
-
-			core-header-panel {
-		      width: 240px;
-		      height: 100%;
-		    }
-		    core-scaffold {
-		      position: absolute;
-		      top: 0;
-		      right: 0;
-		      bottom: 0;
-		      left: 0;
-		    }
-
-			core-scaffold /deep/ #drawer {
-				width: 240px;
-			}
-	
-			core-scaffold /deep/ #main {
-				left: 240px;
-			}
-
-			core-scaffold /deep/ core-toolbar {
-				height: 56px;
-				background-color: #5092bd ;
-			}
-
-		    .core-header {
-		      height: 56px;
-		      line-height: 60px;
-		      font-size: 20px;
-		      padding: 0px 10px;
-		      background-color: #3c779e;
-		      color: #FFF;
-		      transition: height 0.2s;
-		    }
-		    
-		    core-toolbar /deep/ .toolbar-tools {
-		    	height: 60px;
-		    }
-
-/*		    .content {
-		      background: linear-gradient(rgb(214, 227, 231), lightblue);
-		    }*/
+			
 		</style>
 	</head>
 	<body unresolved>
@@ -73,9 +37,12 @@
 			    <core-toolbar class="core-header">
 			    	<img src="images/otterlogo.png" height="30px" width="30px">
 			    	<div>Otter</div>
+<!-- 			    	<div flex horizontal end-justified layout center>
+			    		<paper-icon-button icon="search"></paper-icon-button>
+			    	</div> -->
 			    </core-toolbar>
-			    <core-menu selected=0>
-				  	<core-item icon="account-circle" label="Dashboard"></core-item>
+			    <core-menu selected=0 on-core-select={{>
+				  	<core-item icon="android" label="Dashboard"></core-item>
 				  	<core-submenu icon="apps" label="Topics">
 					  	<core-item label="Topic 1"></core-item>
 					  	<core-item label="Topic 2"></core-item>
@@ -87,6 +54,26 @@
 				  	<core-item icon="settings" label="Settings"></core-item>
 			  	</core-menu>
 		  	</core-header-panel>
+
+		  	<div flex tool layout horizontal center>
+		  		<div></div>
+			  	<div flex horizontal end-justified layout center>
+			  		<paper-button label="help"></paper-button>
+			  		<paper-button label="logout"></paper-button>
+			  		<paper-icon-button icon="search"></paper-icon-button>
+			  	</div>
+		  	</div>
+
+		  	<!-- Page Content -->
+		  	<div class="content">
+		  		<div>Hello, World<!/div>
+		  		<div><my-element></my-element></div>
+		  	</div>
+
 		</core-scaffold>
+
+		<script>
+			Polymer()
+		</script>
 	</body>
 </html>

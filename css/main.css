@@ -1,0 +1,56 @@
+html, body {
+	font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+	height: 100%;
+	margin: 0;
+}
+
+core-header-panel {
+	width: 240px;
+	height: 100%;
+}
+core-scaffold {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+core-scaffold /deep/ #drawer {
+	width: 240px;
+}
+
+core-scaffold /deep/ #main {
+	left: 240px;
+}
+
+core-scaffold /deep/ core-toolbar {
+	height: 56px;
+	background-color: #5092bd ;
+}
+
+core-scaffold /deep/ core-toolbar /deep/ .toolbar-tools {
+	height: 60px;
+}
+
+.core-header {
+	height: 56px;
+	line-height: 60px;
+	font-size: 20px;
+	padding: 0px 10px;
+	background-color: #3c779e;
+	color: #FFF;
+	transition: height 0.2s;
+}
+
+core-toolbar /deep/ .toolbar-tools {
+	height: 60px;
+}
+
+.content {
+	padding: 20px;
+}
+
+paper-button {
+	font-size: 14px;
+}
