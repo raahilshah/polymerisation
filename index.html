@@ -6,54 +6,26 @@
 		<link rel="import" href="bower_components/font-roboto/roboto.html">
 
 		<!-- Library Imports -->
-		<link rel="import" 
-			href="bower_components/core-toolbar/core-toolbar.html">
-		<link rel="import"
-			href="bower_components/core-menu/core-submenu.html">
-		<link rel="import" 
-			href="bower_components/core-header-panel/core-header-panel.html">
-		<link rel="import"
-			href="bower_components/core-menu/core-menu.html">
 		<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
-		<link rel="import" href="bower_components/core-item/core-item.html">
 		<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 		<link rel="import" href="bower_components/paper-button/paper-button.html">
 
 
 		<!-- My Imports -->
 		<link rel="import" href="elements/my-element.html">
-		<link rel="import" href="elements/app-bar.html">
+		<link rel="import" href="elements/sidebar.html">
 
 		<!-- CSS Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css" shim-shadowdom>
 
 		<style>
 			
 		</style>
 	</head>
 	<body unresolved>
-		<core-scaffold>
-			<core-header-panel navigation flex mode="">
-			    <core-toolbar class="core-header">
-			    	<img src="images/otterlogo.png" height="30px" width="30px">
-			    	<div>Otter</div>
-<!-- 			    	<div flex horizontal end-justified layout center>
-			    		<paper-icon-button icon="search"></paper-icon-button>
-			    	</div> -->
-			    </core-toolbar>
-			    <core-menu selected=0 on-core-select={{>
-				  	<core-item icon="android" label="Dashboard"></core-item>
-				  	<core-submenu icon="apps" label="Topics">
-					  	<core-item label="Topic 1"></core-item>
-					  	<core-item label="Topic 2"></core-item>
-				  	</core-submenu>
-				  	<core-submenu icon="add-circle-outline" label="More">
-					  	<core-item label="Topic 1"></core-item>
-					  	<core-item label="Topic 2"></core-item>
-				  	</core-submenu>
-				  	<core-item icon="settings" label="Settings"></core-item>
-			  	</core-menu>
-		  	</core-header-panel>
+		<core-scaffold mode="standard">
+			<my-sidebar id="sidebar"
+				navigation></my-sidebar>
 
 		  	<div flex tool layout horizontal center>
 		  		<div></div>
@@ -66,14 +38,9 @@
 
 		  	<!-- Page Content -->
 		  	<div class="content">
-		  		<div>Hello, World<!/div>
+		  		<div>Hello, World!</div>
 		  		<div><my-element></my-element></div>
 		  	</div>
-
 		</core-scaffold>
-
-		<script>
-			Polymer()
-		</script>
 	</body>
 </html>

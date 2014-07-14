@@ -4,10 +4,6 @@ html, body {
 	margin: 0;
 }
 
-core-header-panel {
-	width: 240px;
-	height: 100%;
-}
 core-scaffold {
 	position: absolute;
 	top: 0;
@@ -30,20 +26,6 @@ core-scaffold /deep/ core-toolbar {
 }
 
 core-scaffold /deep/ core-toolbar /deep/ .toolbar-tools {
-	height: 60px;
-}
-
-.core-header {
-	height: 56px;
-	line-height: 60px;
-	font-size: 20px;
-	padding: 0px 10px;
-	background-color: #3c779e;
-	color: #FFF;
-	transition: height 0.2s;
-}
-
-core-toolbar /deep/ .toolbar-tools {
 	height: 60px;
 }
 
