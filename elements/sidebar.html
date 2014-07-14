@@ -25,13 +25,11 @@
 		Polymer('my-sidebar', {
 			ready: function () {
 				// Temporary menu population.
-				this.items = [];
-				this.icons = [];
+				this.selected = 'foo';
 			},
 			selectAction : function(e, detail) { 
 				if (detail.isSelected) {
-					// Temporary action: console log. 
-					console.log(detail.item.label);
+					this.selected = detail.item.label;
 				}
 			}
 		}); 
