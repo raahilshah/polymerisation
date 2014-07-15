@@ -41,18 +41,14 @@ paper-button {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   overflow: hidden;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
-  -moz-transition: all 1s ease-in-out; /** Firefox **/
-  -o-transition: all 1s ease-in-out; /** Opera **/
 }
 
-/*#card.move-up {
-  transfrom: translate(0, 500px);
-  -webkit-transform: translate(0, 500px);
-  -o-transform: translate(0, 500px);
-  -moz-transform: translate(0, 500px);
-}*/
+#card.move-up {
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.4s ease-in-out; /** Firefox **/
+  -o-transition: all 0.4s ease-in-out; /** Opera **/
+}
 
 #frame {
   display: block;

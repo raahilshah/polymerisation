@@ -46,13 +46,25 @@
 			selectedChanged: function(oldValue, newValue) {
 				this.title = newValue.label;
 				this.$.frame.contentWindow.location.replace(newValue.getAttribute('url'));
-				this.moveCard(-this.$.scaffold.offsetHeight);
+				this.animateCard();
 			},
 			moveCard: function (y) {
 				var s = this.$.card.style;
-				s.webkitTransform = s.transform = 'translate(0, ' + y + 'px)';
+				s.webkitTransform = s.transform = y ? 'translate(0, ' + y + 'px)': '';
 				console.log(s);
-			}
+			},
+			animateCard: function() {
+		    	this.$.card.classList.remove('move-up');
+		    	this.$.card.style.display = 'none';
+		    	this.async(function () {
+		    		this.$.card.style.display = 'block'
+		    		this.moveCard(this.$.scaffold.offsetHeight);
+		    		this.async(function () {
+		    			this.$.card.classList.add('move-up');
+		    			this.moveCard(null);
+		    		}, null, 300);
+		    	});
+		    },
 
 		});
 	</script>
