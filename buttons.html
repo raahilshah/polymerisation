@@ -6,11 +6,15 @@
 		<link rel="import" href="bower_components/font-roboto/roboto.html">
 		<link rel="import" href="bower_components/paper-button/paper-button.html">
 
-		<style shim-shadowdom>
+		<style>
 			body {
 				font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
 				margin: 0;
 				padding: 24px;
+			}
+
+			h2 {
+				color: #5264ae;
 			}
 
 			paper-button {
@@ -26,9 +30,10 @@
 	</head>
 	<body>
 		<!-- page code -->
-		<paper-button raisedButton class="colored" label="FORK"></paper-button>
-		<br>		
-		<paper-button raisedButton class="colored" label="SUBMIT"></paper-button>
+			<h2>Fork a repo:</h2>
+			<paper-button raisedButton class="colored" label="FORK"></paper-button>
+			<h2>Submit Tick:</h2>
+			<paper-button raisedButton class="colored" label="SUBMIT"></paper-button>
 		
 	</body>
 <html>	

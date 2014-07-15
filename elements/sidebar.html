@@ -17,19 +17,18 @@
 			</core-toolbar>
 			<div id="dropShadow"></div>
 			<core-menu id="menu" valueattr="label" selected=0 on-core-select="{{selectAction}}">
-				<template repeat="{{item, itemIndex in items}}">
-					<core-item icon="{{icons[itemIndex]}}" label="{{item}}"></core-item>
+				<template repeat="{{item in items}}">
+					<core-item icon="{{item.icon}}" label="{{item.label}}" url="{{item.url}}"></core-item>
 				</template>
 	</template>
 	<script>
 		Polymer('my-sidebar', {
 			ready: function () {
 				// Temporary menu population.
-				this.selected = 'foo';
 			},
 			selectAction : function(e, detail) { 
 				if (detail.isSelected) {
-					this.selected = detail.item.label;
+					this.selected = detail.item;
 				}
 			}
 		}); 
